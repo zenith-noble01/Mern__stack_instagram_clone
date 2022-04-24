@@ -5,10 +5,17 @@ import {
   ExploreOutlinedIcon,
   HomeOutlinedIcon,
   logo,
+  profile,
   SearchIcon,
   SendOutlinedIcon,
 } from "../../Icons";
 import "./Navbar.scss";
+
+//profile
+//saved
+//settings
+//switch accoutn
+//log out
 
 const Navbar = () => {
   return (
@@ -22,7 +29,6 @@ const Navbar = () => {
           <SearchIcon />
           <input type="text" placeholder="Search" />
         </div>
-
         <ul className="right__routes">
           <li>
             <HomeOutlinedIcon />
@@ -40,10 +46,7 @@ const Navbar = () => {
             <FavoriteBorderRoundedIcon />
           </li>
           <li>
-            <img
-              src="https://1.bp.blogspot.com/-W_7SWMP5Rag/YTuyV5XvtUI/AAAAAAAAuUQ/hm6bYcvlFgQqgv1uosog6K8y0dC9eglTQCLcBGAsYHQ/s880/Best-Profile-Pic-For-Boys%2B%25281%2529.jpg"
-              alt=""
-            />
+            <img src={profile} alt="" />
           </li>
         </ul>
       </div>

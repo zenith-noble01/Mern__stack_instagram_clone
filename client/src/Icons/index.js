@@ -5,6 +5,7 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import logo from "./logo.png";
+import profile from "./profile.jpg";
 
 export {
   SearchIcon,
@@ -14,4 +15,5 @@ export {
   ExploreOutlinedIcon,
   FavoriteBorderRoundedIcon,
   logo,
+  profile,
 };

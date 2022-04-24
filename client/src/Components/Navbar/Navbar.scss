@@ -8,7 +8,7 @@
 
   .app__navbar-left {
     img {
-      height: 39px;
+      height: 29px;
       width: 100%;
     }
   }
@@ -23,6 +23,7 @@
       display: flex;
       align-items: center;
       padding: 2px 16px;
+      position: relative;
       height: 36px;
       background: var(--light__white);
       border-radius: 5px;
