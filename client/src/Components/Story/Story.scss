@@ -1,0 +1,19 @@
+.app__stories-container {
+  height: 70px;
+  width: 70px;
+  border: 1px solid red;
+  padding: 2px;
+  margin: 0 5px;
+  border-radius: 50%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

@@ -6,3 +6,17 @@
   --border: 1px solid #dbdbdb;
   --trans: 0.3s ease-in-out;
 }
+
+.app {
+  height: 100%;
+  width: 100%;
+
+  .app__wrapper {
+    padding: 10px 15%;
+    position: relative;
+    min-height: calc(100vh - 60px);
+    height: 100%;
+    background: var(--light__white);
+    transition: var(--trans);
+  }
+}

@@ -19,12 +19,6 @@ import {
 } from "../../Icons";
 import "./Navbar.scss";
 
-//profile
-//saved
-//settings
-//switch accoutn
-//log out
-
 const Navbar = () => {
   const [userProfileDrop, setUserProfileDrop] = useState(false);
   const [userSearchDrop, setUserSearchDrop] = useState(false);
@@ -47,10 +41,7 @@ const Navbar = () => {
 
       <div className="app__navbar-right">
         <OutsideClickHandler onOutsideClick={() => setUserSearchDrop(false)}>
-          <div
-            className="right_input"
-            onClick={() => setUserSearchDrop(!userSearchDrop)}
-          >
+          <div className="right_input" onClick={() => setUserSearchDrop(true)}>
             <SearchIcon />
             <input type="text" placeholder="Search" />
             {userSearchDrop && (
@@ -84,7 +75,7 @@ const Navbar = () => {
             >
               <img
                 src={profile}
-                alt=""
+                alt="drop"
                 onClick={() => setUserProfileDrop(!userProfileDrop)}
               />
             </OutsideClickHandler>
@@ -119,7 +110,7 @@ const Navbar = () => {
         <div className="user__post">
           <div
             className="post__icon-close"
-            onClick={() => setuserPostDrop(false)}
+            onClick={() => setuserPostDrop(false) || setFile(null)}
           >
             +
           </div>
@@ -143,7 +134,7 @@ const Navbar = () => {
                 </div>
               ) : (
                 <div className="no__file-container">
-                  <div {...getRootProps()}>
+                  <div {...getRootProps()} className="drop__conatainer">
                     <input {...getInputProps()} />
                     <ImageOutlinedIcon
                       style={{ color: isDragActive ? "blue" : "black" }}

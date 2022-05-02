@@ -12,7 +12,8 @@ import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import profile from "./profile.jpg";
 import logo from "./logo.png";
-
+import SentimentSatisfiedAltOutlinedIcon from "@mui/icons-material/SentimentSatisfiedAltOutlined";
+import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
 export {
   FavoriteBorderRoundedIcon,
   AddBoxOutlinedIcon,
@@ -28,4 +29,6 @@ export {
   SettingsIcon,
   ArrowBackIcon,
   ImageOutlinedIcon,
+  SentimentSatisfiedAltOutlinedIcon,
+  ForumOutlinedIcon,
 };

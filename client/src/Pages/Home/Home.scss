@@ -1,0 +1,10 @@
+.app__home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .app__home-container {
+    position: relative;
+    width: 100%;
+  }
+}
