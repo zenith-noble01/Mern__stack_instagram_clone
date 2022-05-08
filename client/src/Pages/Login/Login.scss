@@ -1,0 +1,142 @@
+.app__login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .login__container {
+    background: var(--white);
+    border: var(--border);
+    width: 35%;
+    padding: 1rem;
+    transition: var(--trans);
+    border-radius: 5px;
+
+    height: 50%;
+
+    .login__container-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 2rem 0;
+      img {
+        padding-top: 4rem 0;
+      }
+    }
+
+    .login__form {
+      display: flex;
+      flex-direction: column;
+
+      .form__input-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0.5rem 0;
+
+        input {
+          height: 40px;
+          width: 100%;
+          outline: none;
+          padding: 10px;
+          background: var(--light__white);
+          border-radius: 5px;
+          border: var(--border);
+        }
+      }
+
+      button {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        background: var(--blue);
+        color: var(--white);
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        margin-top: 0.5rem;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+
+    .or__login {
+      height: 1px;
+      width: 100%;
+      background: var(--light__white);
+      margin-top: 2rem;
+      position: relative;
+
+      p {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        height: 40px;
+        width: 40px;
+        background: var(--white);
+        color: var(--gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    }
+
+    .login__options-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+
+      .login__option {
+        background: red;
+        width: 49%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: var((--white));
+        font-weight: bold;
+
+        &.github {
+          background: #333;
+        }
+      }
+    }
+
+    .forgot__container {
+      p {
+        margin-top: 20px;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+  .login__footer {
+    background: var(--white);
+    width: 35%;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: var(--border);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      margin-left: 10px;
+    }
+  }
+}
