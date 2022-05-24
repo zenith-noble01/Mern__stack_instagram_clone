@@ -1,0 +1,38 @@
+.app__conversation {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  overflow: hidden;
+  img {
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .conversation__content {
+    display: flex;
+    flex-direction: column;
+
+    .username {
+      color: var(--black);
+      font-size: 17px;
+    }
+
+    .last__message {
+      color: var(--gray);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &:hover {
+    background: var(--light__white);
+    cursor: pointer;
+  }
+}

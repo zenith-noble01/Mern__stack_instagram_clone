@@ -18,6 +18,7 @@ import {
   BookmarkBorderOutlinedIcon,
 } from "../../Icons";
 import "./Navbar.scss";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [userProfileDrop, setUserProfileDrop] = useState(false);
@@ -32,6 +33,8 @@ const Navbar = () => {
     });
   });
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
+  const username = "zenithnoble";
 
   return (
     <div className="app__navbar">
@@ -53,10 +56,14 @@ const Navbar = () => {
         </OutsideClickHandler>
         <ul className="right__routes">
           <li>
-            <HomeOutlinedIcon />
+            <NavLink to="/">
+              <HomeOutlinedIcon />
+            </NavLink>
           </li>
           <li>
-            <SendOutlinedIcon className="rotate" />
+            <NavLink to="/direct">
+              <SendOutlinedIcon className="rotate" />
+            </NavLink>
           </li>
           <li>
             <AddBoxOutlinedIcon
@@ -64,35 +71,40 @@ const Navbar = () => {
             />
           </li>
           <li>
-            <ExploreOutlinedIcon />
+            <NavLink to="/explore">
+              <ExploreOutlinedIcon />
+            </NavLink>
           </li>
           <li>
             <FavoriteBorderRoundedIcon />
           </li>
           <li>
-            <OutsideClickHandler
-              onOutsideClick={() => setUserProfileDrop(false)}
-            >
-              <img
-                src={profile}
-                alt="drop"
-                onClick={() => setUserProfileDrop(!userProfileDrop)}
-              />
-            </OutsideClickHandler>
+            <img
+              src={profile}
+              alt="drop"
+              onClick={() => setUserProfileDrop(!userProfileDrop)}
+            />
 
             {userProfileDrop && (
-              <ul className="user__profile">
+              <ul
+                className="user__profile"
+                onClick={() => setUserProfileDrop(false)}
+              >
                 <li>
-                  <AccountCircleOutlinedIcon />
-                  Account
+                  <NavLink to={`/profile/${username}`}>
+                    <AccountCircleOutlinedIcon />
+                    Profile
+                  </NavLink>
                 </li>
                 <li>
                   <BookmarkBorderOutlinedIcon />
                   Saved
                 </li>
                 <li>
-                  <SettingsIcon />
-                  Settings
+                  <NavLink to="/settings">
+                    <SettingsIcon />
+                    Settings
+                  </NavLink>
                 </li>
 
                 <li>

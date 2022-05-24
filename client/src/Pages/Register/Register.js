@@ -3,7 +3,7 @@ import "./Register.scss";
 import { logo } from "../../Icons";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   return (
     <div className="app__login">
       <div className="login__container">
@@ -54,4 +54,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

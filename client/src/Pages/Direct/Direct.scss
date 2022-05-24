@@ -1,0 +1,139 @@
+.app__direct {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  background: var(--white);
+  border-radius: 5px;
+  border: var(--border);
+
+  .direct__sidebar {
+    width: 30%;
+    height: 100%;
+    border-right: var(--border);
+
+    .sidebar__header {
+      height: 70px;
+      border-bottom: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .direct__content {
+    display: flex;
+    width: 70%;
+    height: 100%;
+
+    .current__chat {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      .chat__header {
+        height: 70px;
+        min-height: 70px;
+        border-bottom: var(--border);
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+
+      .chat__content {
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        overflow-y: auto;
+
+        .chat__message {
+          width: 100%;
+          height: fit-content;
+          margin: 10px 0;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          &.own {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+          }
+
+          p {
+            background: var(--light__white);
+            max-width: 350px;
+            padding: 10px;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .chat__sender {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+
+        .chat__send {
+          display: flex;
+          align-items: center;
+          border: var(--border);
+          width: 100%;
+          padding: 1rem;
+          border-radius: 2rem;
+
+          input {
+            flex: 1;
+            border: none;
+            outline: none;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+
+    .no__chat {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      span {
+        color: var(--gray);
+        margin-bottom: 2rem;
+      }
+
+      button {
+        padding: 8px 2rem;
+        font-weight: bold;
+        background: var(--blue);
+        color: var(--white);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
